@@ -55,4 +55,5 @@ HTTP.@register(ANIMAL_ROUTER, "GET", "/api/zoo/v1/animals/*", getAnimal)
 HTTP.@register(ANIMAL_ROUTER, "PUT", "/api/zoo/v1/animals", updateAnimal)
 HTTP.@register(ANIMAL_ROUTER, "DELETE", "/api/zoo/v1/animals/*", deleteAnimal)
 
+# Start the server
 HTTP.serve(ANIMAL_ROUTER, ip"0.0.0.0", parse(Int, get(ENV, "PORT", "8080")))
